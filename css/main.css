@@ -1,0 +1,443 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    color: #666;
+    background: #fff;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+nav,
+footer {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    left: 0;
+}
+
+nav {
+    display: block;
+    padding: 0 10%;
+    top: 0;
+    height: 100px;
+    line-height: 100px;
+    background: #fff;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    height: 30px;
+}
+
+main {
+    position: absolute;
+    display: block;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px);
+    padding: 0;
+    margin: 0;
+    background: url('../img/footer-banner.jpg');
+    background-position: bottom center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.news-container {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    padding: 18px 10%;
+    margin: 0;
+}
+
+.news {
+    position: relative;
+    display: block;
+    float: left;
+    width: calc((100% / 3) - 36px);
+    height: 100%;
+    padding: 0;
+    margin: 0 18px;
+    background: #fff;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.news-date {
+    position: relative;
+    display: block;
+    float: left;
+    width: 30%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #005eb8;
+}
+
+.news-description {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 70%;
+    height: 100%;
+    padding: 0 18px;
+    margin: 0;
+}
+
+.news-text {
+    font-size: 12px;
+    fonr-weight: 500;
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.nav-container {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.news-year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 40%;
+    height: 50%;
+    color: #fff;
+    background: #ffb500;
+    font-size: 12px;
+    font-weight: 700;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 2px;
+}
+
+.news-month {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 60%;
+    height: 25%;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.news-day-name {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 60%;
+    height: 25%;
+    color: #fff;
+    background: #0086bf;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.news-day {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 50%;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-logo {
+    position: relative;
+    display: block;
+    float: left;
+    width: 180px;
+    height: 100%;
+    padding: 0;
+    margin: 0 19px;
+    background: url('../img/logo-blue.png');
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 180px 68px;
+}
+
+.nav-selection {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0 18px 0;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    color: #2d2d2d;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #005eb8;
+}
+
+.nav-link:after {
+    position: absolute;
+    top: 64%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #005eb8;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height .3s,opacity .3s,-webkit-transform .3s;
+    -moz-transition: height .3s,opacity .3s,-moz-transform .3s;
+    transition: height .3s,opacity .3s,transform .3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.nav-link:hover:after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.login-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.login-img {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: url('../img/bg.jpg');
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 0 10%;
+    margin: 0;
+    background: #005eb8;
+}
+
+.input {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    margin: 0 0 15px 0;
+    border: 2px solid #efefef;
+    color: #425563;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-appearance: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.input:hover,
+.input:active,
+.input:focus {
+    outline: 0;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    background: #ffb500;
+    color: #425563;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+    -webkit-appearance: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.copyright {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 30px 0 0 0;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.copyright-footer {
+    color: #fff;
+    font-size: 6px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title {
+    display: block;
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 2rem 0;
+}
+
+.logo-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    padding: 0;
+    margin: 0;
+    background: #0086bf;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+
+.logo-container img {
+    width: 70%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
